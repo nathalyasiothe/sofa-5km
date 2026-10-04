@@ -1,0 +1,88 @@
+:root {
+  --bg: #080d14;
+  --panel: #0f1822;
+  --panel-2: #14212e;
+  --line: rgba(255, 255, 255, 0.09);
+  --text: #b9c3cf;
+  --text-h: #f4f7fa;
+  --teal: #20aac2;
+  --teal-deep: #168196;
+  --cyan: #0eebf3;
+  --amber: #f0a35e;
+  --display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --sans: 'Figtree', 'Segoe UI', system-ui, sans-serif;
+  --radius: 14px;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { min-height: 100svh; }
+
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  color: var(--text-h);
+  line-height: 1.1;
+  margin: 0;
+}
+p { margin: 0; }
+
+:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+/* Cabeçalho compartilhado (landing e app) */
+.meu-header, .app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 6%;
+  background: rgba(8, 13, 20, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.logo, .app-logo {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--text-h);
+}
+.logo span, .app-logo span { color: var(--teal); }
+
+.menu-links, .app-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-links a, .app-menu a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease;
+}
+.menu-links a:hover, .app-menu a:hover { color: var(--teal); }
+.app-menu a.ativo { color: var(--text-h); border-bottom-color: var(--teal); }
+
+@media (max-width: 640px) {
+  .meu-header, .app-header { flex-direction: column; align-items: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

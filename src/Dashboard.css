@@ -1,0 +1,29 @@
+.dashboard-container { max-width: 920px; margin: 0 auto; padding: 48px 6% 72px; }
+
+.dashboard-header { margin-bottom: 36px; }
+.dashboard-header h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -0.02em; }
+.dashboard-header p { margin-top: 10px; font-size: 1.1rem; }
+
+.dashboard-content { display: grid; gap: 24px; }
+
+.welcome-card { padding: 28px 0 28px 24px; border-left: 4px solid var(--teal); }
+.welcome-card h2 { font-size: 1.7rem; margin-bottom: 10px; }
+.welcome-card p, .info-section p { max-width: 62ch; }
+
+.progress-section { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 28px; }
+.progress-section h3 { font-size: 1.4rem; }
+.progress-description { margin: 4px 0 18px; font-size: 0.95rem; }
+.progress-bar-container { position: relative; height: 14px; background: var(--panel-2); border-radius: 99px; overflow: hidden; }
+.progress-bar-container::after { content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 5px; background: var(--amber); }
+.progress-bar-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--teal-deep), var(--teal)); }
+.progress-stats { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; margin-top: 12px; font-size: 0.85rem; }
+
+.actions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.action-card { display: flex; flex-direction: column; justify-content: space-between; gap: 18px; padding: 24px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
+.action-card h4 { font-size: 1.25rem; color: var(--teal); margin-bottom: 8px; }
+.action-card p { font-size: 0.97rem; }
+
+.info-section { padding-top: 24px; border-top: 1px solid var(--line); }
+.info-section h3 { font-size: 1.3rem; margin-bottom: 10px; }
+
+@media (max-width: 640px) { .actions-grid { grid-template-columns: 1fr; } }

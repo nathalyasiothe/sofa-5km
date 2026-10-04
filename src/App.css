@@ -1,0 +1,23 @@
+.app-container { min-height: 100vh; }
+
+/* Botões (usados em todo o app) */
+.dashboard-btn, .btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 2px solid var(--teal);
+  background: var(--teal);
+  color: #04141a;
+  font: 700 1rem var(--sans);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.dashboard-btn:hover, .btn:hover { background: var(--cyan); border-color: var(--cyan); transform: translateY(-2px); }
+.dashboard-btn.secondary, .btn.secondary { background: transparent; color: var(--text-h); }
+.dashboard-btn.secondary:hover, .btn.secondary:hover { background: rgba(32, 170, 194, 0.18); border-color: var(--teal); }
+.dashboard-btn.done { background: #3ddc97; border-color: #3ddc97; }
+
+.back-btn { width: auto; display: block; margin: 24px auto 0; }
