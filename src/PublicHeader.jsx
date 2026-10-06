@@ -11,7 +11,6 @@ export default function PublicHeader({ atual, onHome, onContato }) {
         <ul className="menu-links">
           <li><a href="#" className={atual === 'home' ? 'ativo' : ''} onClick={(e) => ir(e, onHome)}>Home</a></li>
           <li><a href="#" className={atual === 'contato' ? 'ativo' : ''} onClick={(e) => ir(e, onContato)}>Contato</a></li>
-          <li><a href="#" onClick={(e) => ir(e)}>Assinaturas</a></li>
         </ul>
       </nav>
     </header>
